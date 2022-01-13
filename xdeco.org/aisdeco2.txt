@@ -1,0 +1,64 @@
+AisDeco2 v.20150415
+
++ changes in code
++ small bugs fixed
+
++ added algorithm to automatically adjust the level of the input signal.
++ changes in the GMSK decoder.
+
+This is a console (command line) AIS decoder program specifically designed for RTLSDR devices,that can do:
+- Simultaneously receive TDMA modulated signals in two frequencies: 161975 kHz and 162025 kHz of marine AIS channels 87/88.
+- Decode the AIS data which were encapsulated within the Marine Standard NMEA protocol.
+- Transmit !AIVDM messages to network in two modes: through its own TCP server on Port and UDP/IP client to remote server on IP:Port.
+  In UDP mode the IP address where the data should be sent to. This can be in the usual Ipv4 format (xx.xx.xx.xx)
+  or it can be a valid host address accepted by the standard function inet_addr. For example, localhost is equivalent to 127.0.0.1 and ShipPlotter default port 4159.
+
+Example:
+
+C:\>aisdeco2.exe --gain 33.8 --freq-correction 68 --freq 161975000 --freq 162025000 --net 30007 --udp 127.0.0.1:4159
+
+
+C:\>aisdeco2 --help
+
+YYYY-MM-DD HH:MM:SS.ms  INFO     AiSDeco2 v.20150415
+Program options:
+  -h [ --help ]         This help message
+  --device-list         List Available devices
+  --device-index arg    Select RTL device (default: 0)
+  --freq arg            Set frequency, Hz. Specify option --freq multiple times to Marine 87 and 88 AIS channels (--freq 161975000 --freq 162025000)
+  --gain arg            Set gain in Receiver, dB (default: auto)
+  --agc                 Enable Automatic Gain Control in RTL (default: off)
+  --freq-correction arg Set frequency correction, ppm (default: 0)
+  --net arg             Enable TCP server on port (default: off)
+  --udp arg             Send UDP stream to server address. Format: address:port (default: off)
+  --no-console          Disable logging on console (default: on)
+  --verbose             Verbose output of Automatic Level Control (default: off)
+
+Cancel the program by <Control-C>
+
+
+
+When try to launch the modesdeco can get an error that msvcp110.dll or/and msvcr110.dll is missing.
+Please, get the actual Microsoft Visual C++ Redistributable for Visual Studio 2012 Update 4 from the Microsoft site:
+
+http://www.microsoft.com/en-US/download/details.aspx?id=30679
+
+Download Visual C++ Redistributable for Visual Studio 2012 Update 4 from Official Microsoft Download Center.
+You will need the 32 bit version: VSU_4\vcredist_x86.exe regardless of what bitness have your operating system.
+The Visual C++ Redistributable Packages install runtime components that are required to run C++ applications built with Visual Studio 2012.
+
+In the archive aisdeco_xp.exe is the same program, but was compiled with Windows XP (v110_xp) platform toolset for compatibility with windows XP.
+Only aisdeco_xp.exe that are created by using the v110_xp toolset support Windows XP and Windows Server 2003. 
+
+
+To successfully receiving AIS signals by RTL dongle, in addition to using the proper antenna-feeder device,
+need to determine the true value of error correction of dongle oscillator in ppm.
+Correction of error need to do exactly at the frequency of 162 MHz and with sample rate 1.4 MSPS, for example, in SDR# (See picture sdrsharp_ppm.jpg)
+
+AIS signals look like small horizontal lines on the waterfall and if you are listening to its through your speakers, they will just sound like blips of noise.
+The signals may not appear exactly on 161975 kHz or 162025 kHz labels of tuning scale, since of error dongle oscillator.
+Just tune manually by changing the value in window "Frequency correction" until the signals are properly centered.
+Use "Zoom" knob to zoom signals on the waterfall to see signals better.
+
+
+/sergsero
