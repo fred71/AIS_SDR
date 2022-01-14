@@ -64,3 +64,22 @@ Vous trouverez dans les binaires de ce repository, un installeur créé avec Inn
 >"AppParameters"="--gain 43.9 --freq-correction 5 --freq 161975000 --freq 162025000 --net 30007 --udp 127.0.0.1:4159"
 
 Pour renseigner vos valeurs personnalisées de `--gain` et `--freq-correction`, puis de le fusionner à votre registre.
+
+
+## Usage
+
+ Démarrer l'application "AIS Décodeur"
+
+![Fenêtre de l'application](https://github.com/fred71/AIS_SDR/blob/main/images/AIS%20D%C3%A9codeur%201.png)   
+   
+   
+ Si le Dongle n'est pas détecté, vérifier son branchement et cliquer sur `Rescan`
+ 
+ Une fois le Dongle détecté correctement le bouton vert `Play` est actif, cliquer dessus.
+   
+ ![Fenêtre de l'application](https://github.com/fred71/AIS_SDR/blob/main/images/AIS%20D%C3%A9codeur%202.png)   
+  
+   
+ Après quelques secondes toutes les lignes doivent être OK. Si ce n'est pas le cas, cliquer sur le bouton rouge `Stop`, attendez quelques secondes et cliquer à nouveau sur le bouton vert `Play`.
+ 
+ Quand tout est au vert, vous pouvez quitter l'application. `Quiter`
