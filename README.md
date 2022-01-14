@@ -1,7 +1,7 @@
 # AIS_SDR
 
 
-## Decodage de l'AIS via un Dongle RTL-SDR
+## Décodage de l'AIS via un Dongle RTL-SDR
 
 
 ## Historique
