@@ -56,7 +56,7 @@ Adapter les valeurs `--gain` et `--freq-correction` avec les valeurs que vous av
 
 ## Bonus
 
-Vous trouverez dans les binaires de ce repository, un installeur créé avec Inno Setup qui fera tout ça pour vous, il ne vous restera plus alors qu'à créer un fichier aisdecosrvany.reg, contenant :
+Vous trouverez dans le répertoire `setup` de ce repository, un installeur (et son fichier source .iss) créé avec Inno Setup qui fera tout ça pour vous, il ne vous restera plus alors qu'à créer un fichier aisdecosrvany.reg, contenant :
 
 >   Windows Registry Editor Version 5.00
 >
