@@ -8,7 +8,7 @@
 
 Il y a quelques années, j'ai suivi cet [excelent article](https://1plus1blog.com/2017/04/19/fabriquer-un-recepteur-ais-avec-antenne-rtl-sdr-et-opencpn/) pour installer l'AIS sur l'ordinateur d'un ami pour sa traversée de la Manche (Brest-Plymouth) sur un voilier de 10.5 m
 
-Mon ami n'étant pas féru d'informatique, j'ai transformé AISdeco2.exe en service Windows (pour ne pas riquer de fermer accidentellement la réception de l'AIS pendant la navigation).
+Mon ami n'étant pas féru d'informatique, j'ai transformé AISdeco2.exe en service Windows (pour ne pas risquer de fermer accidentellement la réception de l'AIS pendant la navigation).
 
 J'ai choisi de mettre le service en démarrage manuel afin de ne le lancer que lorsque le Dongle RTL-SDR est branché. J'ai donc créé (avec AutoIt) une petite interface graphique pour gérer le démarage ou l'arrêt du service.
 
