@@ -6,15 +6,15 @@
 
 ## Historique
 
-Il y a quelques années, j'ai suivi cet [excelent article](https://1plus1blog.com/2017/04/19/fabriquer-un-recepteur-ais-avec-antenne-rtl-sdr-et-opencpn/) pour installer l'AIS sur l'ordinateur d'un ami pour sa traversée de la Manche (Brest-Plymouth) sur un voilier de 10.5 m
+Il y a quelques années, j'ai suivi cet [excellent article](https://1plus1blog.com/2017/04/19/fabriquer-un-recepteur-ais-avec-antenne-rtl-sdr-et-opencpn/) pour installer l'AIS sur l'ordinateur d'un ami pour sa traversée de la Manche (Brest-Plymouth) sur un voilier de 10.5 m
 
 Mon ami n'étant pas féru d'informatique, j'ai transformé AISdeco2.exe en service Windows (pour ne pas risquer de fermer accidentellement la réception de l'AIS pendant la navigation).
 
-J'ai choisi de mettre le service en démarrage manuel afin de ne le lancer que lorsque le Dongle RTL-SDR est branché. J'ai donc créé (avec AutoIt) une petite interface graphique pour gérer le démarage ou l'arrêt du service.
+J'ai choisi de mettre le service en démarrage manuel afin de ne le lancer que lorsque le Dongle RTL-SDR est branché. J'ai donc créé (avec AutoIt) une petite interface graphique pour gérer le démarrage ou l'arrêt du service.
 
-A la suite de la réinstallation de l'AIS sur un nouvel ordinateur, j'ai décidé de mettre à disposition mon travail, si ça peut rendre service à d'autres marins ....
+À la suite de la réinstallation de l'AIS sur un nouvel ordinateur, j'ai décidé de mettre à disposition mon travail, si ça peut rendre service à d'autres marins ...
 
-Vous trouverez dans ce repository : le code source et le binaire de gestion du service de reception de l'AIS et ci-dessous, la procédure d'installation.
+Vous trouverez dans ce repository : le code source et le binaire de gestion du service de réception de l'AIS et ci-dessous, la procédure d'installation.
 
 ## Prérequis
 
@@ -36,7 +36,7 @@ Un prérequis à l'utilisation de AISdeco2 est l'installation du package [Micros
 
    3) Copier AIS.exe, aisdeco2.exe, libusb-1.0.dll et rtlsdr.dll dans %ProgramFiles(x86)%\aisdeco\
 
-   4) Executer dans une fenêtre de commande dos lancée en tant qu'adminisytrateur : 
+   4) Executer dans une fenêtre de commande dos lancée en tant qu'administrateur : 
 > sc create AISDecoder binPath= %SystemRoot%\system32\srvany.exe DisplayName= "Déodeur AIS"
 
    5) Créer puis fusionner au registre un fichier nommé aisdecosrvany.reg, contenant :
@@ -56,7 +56,7 @@ Adapter les valeurs `--gain` et `--freq-correction` avec les valeurs que vous av
 
 ## Bonus
 
-Vous trouverez dans les binaires de ce repository, un installeur créé avec Inno Setup qui fera tout ça pour vous, il ne vous restera plus alors qu'a créer une fichier aisdecosrvany.reg, contenant :
+Vous trouverez dans les binaires de ce repository, un installeur créé avec Inno Setup qui fera tout ça pour vous, il ne vous restera plus alors qu'à créer un fichier aisdecosrvany.reg, contenant :
 
 >   Windows Registry Editor Version 5.00
 >
