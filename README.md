@@ -22,7 +22,7 @@ Vous trouverez dans ce repository : le code source et le binaire de gestion du s
 * Le drivers Zadig (https://zadig.akeo.ie/downloads/)
 * La librairie libusb-1.0.dll (https://libusb.info/)
 * La librairie rtlsdr.dll (http://osmocom.org/attachments/download/2242/RelWithDebInfo.zip)
-* l'executable AISdeco2.exe (http://xdeco.org/ le site ne semble plus exister, j'ai donc ajouté ce binaire à mes sources dans `third party`)
+* l'executable AISdeco2.exe (http://xdeco.org/ le site ne semble plus exister, j'ai donc ajouté ce binaire à mes sources dans `xdeco.org`)
 * l'executable srvany.exe (Ressource Kit Tools Microsoft 2003) on ne le trouve plus sur le site officiel de Microsoft, en revanche on peut encore le trouver là (https://www.technlg.net/windows/download-windows-resource-kit-tools/)
 * l'executable AIS.exe (dans les binaires de ce repository)
 
