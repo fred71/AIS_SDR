@@ -83,3 +83,15 @@ Pour renseigner vos valeurs personnalisées de `--gain` et `--freq-correction`, 
  Après quelques secondes toutes les lignes doivent être OK. Si ce n'est pas le cas, cliquer sur le bouton rouge `Stop`, attendez quelques secondes et cliquer à nouveau sur le bouton vert `Play`.
  
  Quand tout est au vert, vous pouvez quitter l'application. `Quiter`
+ 
+ ## Configuration d'OpenCPN
+ 
+Ajouter une nouvelle connexion :
+* Protocole  :       UDP
+* Adresse IP : 127.0.0.1
+* Port com   :      4159
+* Commentaire de l'utilisateur : AIS
+
+
+![Connexion AIS](https://github.com/fred71/AIS_SDR/blob/main/images/Config%20OpenCPN.png) 
+
